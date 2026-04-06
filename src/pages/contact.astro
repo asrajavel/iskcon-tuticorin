@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact" description="Get in touch with ISKCON Tuticorin">
+  <section class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-purple mb-2">Contact Us</h1>
+    <p class="text-muted max-w-xl mb-10">
+      We'd love to hear from you. Visit us, call us, or send us a message.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Contact Info -->
+      <div class="space-y-8">
+        <div>
+          <h2 class="font-bold text-dark text-lg mb-3">Temple Address</h2>
+          <p class="text-muted text-sm leading-relaxed">
+            ISKCON Tuticorin<br />
+            Hare Krishna Land<br />
+            Tuticorin - 628001<br />
+            Tamil Nadu, India
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-bold text-dark text-lg mb-3">Get in Touch</h2>
+          <div class="space-y-2 text-sm text-muted">
+            <p class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              +91 98765 43210
+            </p>
+            <p class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              info@iskcontuticorin.com
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-bold text-dark text-lg mb-3">Temple Timings</h2>
+          <div class="text-sm text-muted space-y-2">
+            <div class="flex justify-between border-b border-border pb-2">
+              <span>Mangala Arati</span><span class="font-medium text-dark">4:30 AM</span>
+            </div>
+            <div class="flex justify-between border-b border-border pb-2">
+              <span>Darshan Opens</span><span class="font-medium text-dark">7:00 AM</span>
+            </div>
+            <div class="flex justify-between border-b border-border pb-2">
+              <span>Raj Bhog Arati</span><span class="font-medium text-dark">12:30 PM</span>
+            </div>
+            <div class="flex justify-between border-b border-border pb-2">
+              <span>Evening Darshan</span><span class="font-medium text-dark">4:00 PM</span>
+            </div>
+            <div class="flex justify-between border-b border-border pb-2">
+              <span>Sandhya Arati</span><span class="font-medium text-dark">7:00 PM</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Temple Closes</span><span class="font-medium text-dark">8:30 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="border border-border rounded-lg p-6">
+        <h2 class="font-bold text-dark text-lg mb-4">Send us a Message</h2>
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-dark mb-1" for="name">Name</label>
+            <input type="text" id="name" class="w-full border border-border rounded-lg px-3 py-2.5 text-sm focus:ring-2 focus:ring-purple/20 focus:border-purple outline-none transition-colors" placeholder="Your name" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-dark mb-1" for="phone">Phone</label>
+            <input type="tel" id="phone" class="w-full border border-border rounded-lg px-3 py-2.5 text-sm focus:ring-2 focus:ring-purple/20 focus:border-purple outline-none transition-colors" placeholder="+91 ..." />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-dark mb-1" for="email">Email (optional)</label>
+            <input type="email" id="email" class="w-full border border-border rounded-lg px-3 py-2.5 text-sm focus:ring-2 focus:ring-purple/20 focus:border-purple outline-none transition-colors" placeholder="your@email.com" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-dark mb-1" for="subject">Subject</label>
+            <select id="subject" class="w-full border border-border rounded-lg px-3 py-2.5 text-sm focus:ring-2 focus:ring-purple/20 focus:border-purple outline-none transition-colors">
+              <option>General Enquiry</option>
+              <option>Seva Booking</option>
+              <option>Course Registration</option>
+              <option>Donation</option>
+              <option>Volunteer</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-dark mb-1" for="message">Message</label>
+            <textarea id="message" rows="4" class="w-full border border-border rounded-lg px-3 py-2.5 text-sm focus:ring-2 focus:ring-purple/20 focus:border-purple outline-none transition-colors" placeholder="How can we help you?"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-purple hover:bg-purple-dark text-white py-2.5 rounded-lg text-sm font-medium transition-colors">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>

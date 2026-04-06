@@ -1,0 +1,63 @@
+---
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Sevas', href: '/sevas' },
+  { label: 'Courses', href: '/courses' },
+  { label: 'Events', href: '/events' },
+  { label: 'Contact', href: '/contact' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="bg-white border-b border-border sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <img src="https://iskconmumbaipull-21250.kxcdn.com/bi_theme_snippets/static/src/img/logo-black-header.png" alt="ISKCON" class="h-12 w-auto" />
+      <div>
+        <div class="text-lg font-bold text-dark leading-tight">ISKCON Tuticorin</div>
+        <div class="text-xs text-muted">International Society for Krishna Consciousness</div>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-1">
+      {navItems.map(item => (
+        <a
+          href={item.href}
+          class:list={[
+            'px-4 py-2 text-sm font-medium transition-colors',
+            currentPath === item.href
+              ? 'text-purple border-b-2 border-purple'
+              : 'text-dark hover:text-purple',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-dark" aria-label="Menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="md:hidden hidden border-t border-border px-4 pb-3 bg-white">
+    {navItems.map(item => (
+      <a
+        href={item.href}
+        class:list={[
+          'block py-2.5 text-sm border-b border-border last:border-0',
+          currentPath === item.href ? 'text-purple font-medium' : 'text-dark hover:text-purple',
+        ]}
+      >
+        {item.label}
+      </a>
+    ))}
+  </nav>
+</header>
+
+<script>
+  document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+    document.getElementById('mobile-menu')?.classList.toggle('hidden');
+  });
+</script>

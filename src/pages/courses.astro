@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const courses = [
+  {
+    title: 'Bhagavad Gita Study',
+    description: 'A systematic chapter-by-chapter study of the Bhagavad Gita As It Is by Srila Prabhupada. Understand the essence of Vedic philosophy and its practical application in daily life.',
+    schedule: 'Every Saturday, 6:00 PM - 7:30 PM',
+    duration: '18 weeks (one chapter per week)',
+    level: 'Beginner',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Radha_Krishna_ISKCON_Tirupati.JPG',
+  },
+  {
+    title: 'Srimad Bhagavatam Classes',
+    description: 'Daily morning discourse on the Srimad Bhagavatam, the ripened fruit of the Vedic literature. Covers the pastimes of Lord Krishna and His devotees.',
+    schedule: 'Daily, 7:30 AM - 8:30 AM',
+    duration: 'Ongoing',
+    level: 'All levels',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/ISKCON_Juhu_Temple_Altars.JPG',
+  },
+  {
+    title: 'Kirtan & Music Training',
+    description: 'Learn traditional Vaishnava kirtans, bhajans, and mridanga/kartals. Develop your musical skills in service of the Lord.',
+    schedule: 'Every Sunday, 3:00 PM - 4:30 PM',
+    duration: '12 weeks',
+    level: 'Beginner',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Nitai-Gauranga.jpg',
+  },
+  {
+    title: 'Vedic Cooking Classes',
+    description: 'Learn to prepare sattvic prasadam the traditional way. Includes rice varieties, sabzis, sweets, and festival preparations.',
+    schedule: 'First & third Saturday, 10:00 AM - 12:00 PM',
+    duration: '8 sessions',
+    level: 'Beginner',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Sunday_Love_feast.jpg',
+  },
+  {
+    title: 'Youth Spiritual Camp',
+    description: 'Weekend camps for youth (ages 13-25) featuring interactive sessions on Vedic philosophy, leadership, team building, and spiritual practices.',
+    schedule: 'Monthly (check calendar)',
+    duration: '2-day weekend camps',
+    level: 'Youth',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Sri_Caitanya_Mahaprabhu_and_Nityananda_Mahaprabhu%21.jpg',
+  },
+  {
+    title: 'Sanskrit Basics',
+    description: 'Learn to read and chant Sanskrit verses from the scriptures. Covers Devanagari script, pronunciation, and key verses.',
+    schedule: 'Every Wednesday, 6:00 PM - 7:00 PM',
+    duration: '16 weeks',
+    level: 'Beginner',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/55/Radha_Krishna-chandra_Temple.jpg',
+  },
+];
+---
+
+<Layout title="Courses" description="Spiritual education programs at ISKCON Tuticorin">
+  <section class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-purple mb-2">Spiritual Education</h1>
+    <p class="text-muted max-w-xl mb-10">
+      Deepen your understanding of Vedic philosophy through our courses and programs.
+      All programs are free and open to everyone.
+    </p>
+
+    <div class="space-y-6">
+      {courses.map(course => (
+        <div class="border border-border rounded-lg overflow-hidden hover:border-purple/30 transition-colors bg-white flex flex-col md:flex-row">
+          <div class="md:w-60 h-48 md:h-auto overflow-hidden shrink-0">
+            <img src={course.imageUrl} alt={course.title} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6 flex-1">
+            <div class="flex items-start justify-between gap-2">
+              <h3 class="font-bold text-lg text-dark">{course.title}</h3>
+              <span class="text-xs bg-purple/10 text-purple px-2 py-0.5 rounded-full font-medium shrink-0">
+                {course.level}
+              </span>
+            </div>
+            <p class="text-muted text-sm mt-2 leading-relaxed">{course.description}</p>
+            <div class="mt-4 flex flex-wrap gap-4 text-xs text-muted">
+              <div class="flex items-center gap-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                {course.schedule}
+              </div>
+              <div class="flex items-center gap-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                {course.duration}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <hr class="my-10 border-border" />
+
+    <div class="text-center">
+      <h2 class="text-2xl font-bold text-purple mb-2">Ready to begin your spiritual journey?</h2>
+      <p class="text-muted text-sm mb-4">All courses are free. Just walk in or contact us to register.</p>
+      <a href="/contact" class="inline-block bg-purple hover:bg-purple-dark text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-colors">
+        Register Now
+      </a>
+    </div>
+  </section>
+</Layout>
