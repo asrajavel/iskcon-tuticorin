@@ -74,13 +74,13 @@ const events = [
           event.highlight ? 'border-purple/40' : 'border-border',
         ]}>
           <div class="p-6">
-            <div class="flex flex-wrap items-start gap-4">
-              <div class="shrink-0 text-center border border-border rounded-lg px-4 py-3 min-w-[100px]">
+            <div class="flex flex-col sm:flex-row items-start gap-4">
+              <div class="text-center border border-border rounded-lg px-4 py-3 w-full sm:w-auto sm:min-w-[100px] shrink-0">
                 <div class="text-purple font-bold text-sm">{event.date}</div>
                 <div class="text-muted text-xs mt-0.5">{event.time}</div>
               </div>
               <div class="flex-1 min-w-0">
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2 flex-wrap">
                   <h3 class="font-bold text-lg text-dark">{event.title}</h3>
                   {event.highlight && (
                     <span class="text-xs bg-purple/10 text-purple px-2 py-0.5 rounded-full font-medium">Featured</span>
