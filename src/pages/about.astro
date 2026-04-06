@@ -1,30 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title="About" description="Learn about ISKCON Tuticorin and the Hare Krishna movement">
   <section class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-3xl md:text-4xl font-bold text-purple mb-8">About ISKCON Tuticorin</h1>
-
-    <div class="prose max-w-none text-dark leading-relaxed space-y-6">
-      <p>
-        ISKCON Tuticorin is a centre of the International Society for Krishna Consciousness (ISKCON),
-        founded by His Divine Grace A.C. Bhaktivedanta Swami Prabhupada in 1966. The temple serves as
-        a spiritual haven in the pearl city of Tuticorin (Thoothukudi), Tamil Nadu, offering a place
-        for devotees and visitors to connect with the ancient tradition of Bhakti Yoga.
-      </p>
-
-      <p>
-        The temple is home to the beautiful deities of Sri Sri Radha Dwarakadish, who are worshipped
-        daily with love and devotion following the standards established by Srila Prabhupada. The temple
-        conducts regular programs including morning and evening arati, Bhagavad Gita classes, kirtan
-        sessions, and Sunday Love Feast — all open to the public free of charge.
-      </p>
-    </div>
-
-    <hr class="my-10 border-border" />
-
-    <h2 class="text-2xl md:text-3xl font-bold text-purple mb-6">History of the Hare Krishna Movement</h2>
+    <h1 class="text-3xl md:text-4xl font-bold text-purple mb-8">History of the Hare Krishna Movement</h1>
 
     <div class="prose max-w-none text-dark leading-relaxed space-y-6">
       <p>
@@ -116,10 +98,10 @@ import Layout from '../layouts/Layout.astro';
 
     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
       {[
-        { title: 'Temple Sevas', href: '/sevas' },
-        { title: 'Spiritual Courses', href: '/courses' },
-        { title: 'Events & Festivals', href: '/events' },
-        { title: 'Contact Us', href: '/contact' },
+        { title: 'Temple Sevas', href: `${base}/sevas` },
+        { title: 'Spiritual Courses', href: `${base}/courses` },
+        { title: 'Events & Festivals', href: `${base}/events` },
+        { title: 'Contact Us', href: `${base}/contact` },
       ].map(link => (
         <a href={link.href} class="flex items-center justify-between border border-border rounded-lg px-5 py-4 hover:border-purple/40 transition-colors group">
           <span class="font-medium text-dark group-hover:text-purple transition-colors">{link.title}</span>

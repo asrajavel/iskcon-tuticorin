@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const sevas = [
   { title: 'Abhishekam', description: 'Sacred bathing ceremony for the deities with milk, honey, ghee, curd, and holy water. Recommended for special occasions and festivals.', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/ISKCON_Juhu_Temple_Altars.JPG', price: '₹1,116' },
   { title: 'Archana', description: 'Recitation of 108 names of the Lord. Available for Radha Krishna, Gaura Nitai, and Jagannath, Baladeva, Subhadra.', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Radha_Krishna_ISKCON_Tirupati.JPG', price: '₹251' },
@@ -48,7 +50,7 @@ const sevas = [
       <p class="text-muted text-sm mb-4">
         Contact us directly to book any seva. We accept UPI, bank transfer, and cash.
       </p>
-      <a href="/contact" class="inline-block bg-purple hover:bg-purple-dark text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-colors">
+      <a href={`${base}/contact`} class="inline-block bg-purple hover:bg-purple-dark text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-colors">
         Contact Temple Office
       </a>
     </div>

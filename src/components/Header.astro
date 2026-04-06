@@ -1,11 +1,13 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Sevas', href: '/sevas' },
-  { label: 'Courses', href: '/courses' },
-  { label: 'Events', href: '/events' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Home', href: `${base}/` },
+  { label: 'About', href: `${base}/about` },
+  { label: 'Sevas', href: `${base}/sevas` },
+  { label: 'Courses', href: `${base}/courses` },
+  { label: 'Events', href: `${base}/events` },
+  { label: 'Contact', href: `${base}/contact` },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -13,7 +15,7 @@ const currentPath = Astro.url.pathname;
 
 <header class="bg-white border-b border-border sticky top-0 z-50">
   <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-    <a href="/" class="flex items-center gap-3">
+    <a href={`${base}/`} class="flex items-center gap-3">
       <img src="https://iskconmumbaipull-21250.kxcdn.com/bi_theme_snippets/static/src/img/logo-black-header.png" alt="ISKCON" class="h-12 w-auto" />
       <div>
         <div class="text-lg font-bold text-dark leading-tight">ISKCON Tuticorin</div>
