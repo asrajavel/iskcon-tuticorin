@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const articles = [
+  {
+    slug: 'bhakti-yoga',
+    title: 'Bhakti Yoga',
+    summary: 'Yoga is more than just a physical exercise. Bhakti-yoga means to connect to the Supreme by means of loving devotional service.',
+    imageUrl: `${base}/images/articles/bhakti-yoga-1.jpeg`,
+  },
+  {
+    slug: 'karma',
+    title: 'Karma',
+    summary: 'Ever wondered why bad things happen to good people? The law of karma regulates the reactions to our activities.',
+    imageUrl: `${base}/images/articles/karma-1.jpeg`,
+  },
+  {
+    slug: 'reincarnation',
+    title: 'Reincarnation',
+    summary: 'Everyone at some time in life wonders what happens after death. Life does not end with the death of our body.',
+    imageUrl: `${base}/images/articles/reincarnation-1.jpeg`,
+  },
+  {
+    slug: 'the-goal-of-life',
+    title: 'The Goal of Life',
+    summary: 'The goal of human life is to re-awaken our original pure love for God, Krishna.',
+    imageUrl: `${base}/images/articles/the-goal-of-life-1.jpeg`,
+  },
+  {
+    slug: 'who-am-i',
+    title: 'Who Am I?',
+    summary: 'Each of us is one of the innumerable spiritual souls who emanate from Krishna. Self-realization means discovering our eternal relationship.',
+    imageUrl: `${base}/images/articles/who-am-i-1.jpeg`,
+  },
+  {
+    slug: 'maha-mantra',
+    title: 'Meaning of the Maha Mantra',
+    summary: 'The transcendental vibration by chanting of Hare Krishna is the sublime method for reviving our Krishna consciousness.',
+    imageUrl: `${base}/images/articles/maha-mantra-1.jpeg`,
+  },
+];
+---
+
+<Layout title="Articles" description="Spiritual articles and teachings from ISKCON Tirunelveli">
+  <section class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-purple mb-2">Articles</h1>
+    <p class="text-muted max-w-xl mb-10">
+      Explore the timeless wisdom of Vedic philosophy through these articles on spiritual life, self-realization, and devotion.
+    </p>
+
+    <div class="space-y-6">
+      {articles.map(article => (
+        <a href={`${base}/articles/${article.slug}`} class="flex flex-col sm:flex-row gap-5 border border-border rounded-lg overflow-hidden hover:border-purple/30 transition-colors bg-white group">
+          <div class="sm:w-56 h-48 sm:h-auto overflow-hidden shrink-0">
+            <img src={article.imageUrl} alt={article.title} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-5 sm:py-6 flex-1">
+            <h2 class="font-bold text-lg text-dark group-hover:text-purple transition-colors">{article.title}</h2>
+            <p class="text-muted text-sm mt-2 leading-relaxed">{article.summary}</p>
+            <span class="inline-flex items-center gap-1 mt-3 text-sm text-purple font-medium">
+              Read article
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>

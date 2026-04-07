@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout title="Reincarnation" description="Understanding reincarnation and the eternal soul">
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <a href={`${base}/articles`} class="text-sm text-purple hover:underline mb-6 inline-flex items-center gap-1">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      Back to Articles
+    </a>
+    <h1 class="text-3xl md:text-4xl font-bold text-purple mt-4 mb-6">Reincarnation</h1>
+    <img src={`${base}/images/articles/reincarnation-1.jpeg`} alt="Reincarnation" class="w-full rounded-lg mb-8" />
+    <div class="prose max-w-none text-dark leading-relaxed space-y-5">
+      <p>Everyone at some time in life wonders what happens after death. Throughout history, some of the most thoughtful minds have advocated that life does not end with the death of our body, but continues on via a process known as reincarnation. In the Western world, followers of the Orphic religion in ancient Greece were the first known exponents of reincarnation. They were succeeded by Pythagoras, Socrates, Plato and a host of other philosophers.</p>
+      <p>The Vedic literature of India advocates that the soul, or atma, gives life to the body. Life does not arise from a particular combination of material elements as some modern scientists theorize. At the time of death, we leave one body and enter a new one. That is called reincarnation.</p>
+      <p>The concept is not as alien as it might seem. We can observe that we change from one body to another throughout our lifetime. Our body at birth is completely different from our adult body. Yet throughout these changes, the conscious self remains the same. Similarly, the conscious self remains the same at death and transfers from one body to the next in the cycle of reincarnation.</p>
+      <p>Our present body is the result of a long series of actions and reactions in previous lives. The law that governs this is known as karma: every action has a reaction. Our previous actions have produced our present body, and our current actions will determine our next body.</p>
+      <p>Only in the human form can we free ourselves from the endless cycle of reincarnation, of birth and death, by re-establishing our eternal, loving relationship with Lord Krishna. As Krishna states in Bhagavad Gita 8.16, "From the highest planet in the material world down to the lowest, all are places of misery wherein repeated birth and death take place. But one attains to My abode… never takes birth again."</p>
+    </div>
+  </section>
+</Layout>

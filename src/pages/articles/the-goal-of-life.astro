@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout title="The Goal of Life" description="Understanding the true goal of human life">
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <a href={`${base}/articles`} class="text-sm text-purple hover:underline mb-6 inline-flex items-center gap-1">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      Back to Articles
+    </a>
+    <h1 class="text-3xl md:text-4xl font-bold text-purple mt-4 mb-6">The Goal of Life</h1>
+    <img src={`${base}/images/articles/the-goal-of-life-1.jpeg`} alt="The Goal of Life" class="w-full rounded-lg mb-8" />
+    <div class="prose max-w-none text-dark leading-relaxed space-y-5">
+      <p>The goal of human life is to re-awaken our original pure love for God, Krishna. We souls exist to have an intimate loving relationship with Him. We can never be happy by rejecting that relationship and denying our true nature.</p>
+      <p>The things we do in this world indicate our true, eternal nature. We have to love; it's unavoidable. Having turned away from Krishna, we try to fulfill our need to love and be loved by searching for ideal relationships in this world. But exchanges of love here are never perfect and cannot last forever.</p>
+      <p>Awakening pure love for Krishna is perfection. Nothing else will satisfy us. Everything that exists in the material and spiritual worlds is meant to support our relationship with Krishna. Human life is a chance for us to reestablish that relationship. That endeavor should be the focus of our lives.</p>
+      <p>Because love includes service, pure love for God is called pure devotional service, or Bhakti. The ways to awaken Bhakti are the substance of the practice of Bhakti yoga.</p>
+    </div>
+  </section>
+</Layout>

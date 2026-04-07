@@ -116,9 +116,27 @@ const exploreLinks = [
     </div>
   </section>
 
-  <hr class="max-w-4xl mx-auto border-border" />
+  <!-- Articles Preview -->
+  <section class="max-w-4xl mx-auto px-4 pb-12">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-purple">Articles</h2>
+      <a href={`${base}/articles`} class="text-sm text-purple hover:underline">View all &rarr;</a>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-5">
+      {[
+        { slug: 'bhakti-yoga', title: 'Bhakti Yoga', summary: 'Connect to the Supreme by means of loving devotional service.' },
+        { slug: 'karma', title: 'Karma', summary: 'The law of karma regulates the reactions to our activities.' },
+        { slug: 'who-am-i', title: 'Who Am I?', summary: 'Discovering our eternal spiritual identity and relationship with Krishna.' },
+      ].map(article => (
+        <a href={`${base}/articles/${article.slug}`} class="border border-border rounded-lg p-5 hover:border-purple/30 transition-colors group">
+          <h3 class="font-bold text-dark group-hover:text-purple transition-colors">{article.title}</h3>
+          <p class="text-muted text-sm mt-2">{article.summary}</p>
+        </a>
+      ))}
+    </div>
+  </section>
 
-  <!-- Explore More -->
+  <hr class="max-w-4xl mx-auto border-border" />
   <section class="max-w-4xl mx-auto px-4 py-12">
     <h2 class="text-2xl md:text-3xl font-bold text-purple mb-6">Explore more</h2>
     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">

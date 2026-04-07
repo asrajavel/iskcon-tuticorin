@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout title="Meaning of the Maha Mantra" description="Understanding the Hare Krishna Maha Mantra by Srila Prabhupada">
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <a href={`${base}/articles`} class="text-sm text-purple hover:underline mb-6 inline-flex items-center gap-1">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      Back to Articles
+    </a>
+    <h1 class="text-3xl md:text-4xl font-bold text-purple mt-4 mb-6">Meaning of the Maha Mantra</h1>
+    <p class="text-sm text-muted mb-6">By His Divine Grace A.C. Bhaktivedanta Swami Prabhupada</p>
+    <img src={`${base}/images/articles/maha-mantra-1.jpeg`} alt="Maha Mantra" class="w-full rounded-lg mb-8" />
+    <div class="bg-purple/5 border border-purple/20 rounded-lg p-6 mb-8 text-center">
+      <p class="text-lg font-bold text-purple leading-relaxed">
+        Hare Krishna Hare Krishna Krishna Krishna Hare Hare<br />
+        Hare Rama Hare Rama Rama Rama Hare Hare
+      </p>
+    </div>
+    <div class="prose max-w-none text-dark leading-relaxed space-y-5">
+      <p>This transcendental vibration by chanting of Hare Krishna, Hare Krishna, Krishna Krishna, Hare Hare, Hare Rama, Hare Rama, Rama Rama, Hare Hare is the sublime method for reviving our Krishna consciousness.</p>
+      <p>As living spiritual souls we are all originally Krishna conscious entities, but due to our association with matter from time immemorial, our consciousness is now polluted by the material atmosphere. In this polluted concept of life, we are all trying to exploit the resources of material nature, but actually we are becoming more and more entangled in its complexities. This illusion is called maya or hard struggle for existence over the stringent laws of material nature. This illusory struggle against the material nature can at once be stopped by revival of our Krishna consciousness.</p>
+      <p>Krishna consciousness is not an artificial imposition on the mind; this consciousness is the original energy of the living entity. When we hear the transcendental vibration, this consciousness is revived. And this process is recommended by authorities for this age. By practical experience also, one can perceive that by chanting this maha-mantra, or the Great Chanting for Deliverance, one can at once feel transcendental ecstasy from the spiritual stratum.</p>
+      <p>When one is factually on the plane of spiritual understanding — surpassing the stages of senses, mind, and intelligence — one is situated on the transcendental plane. This chanting of Hare Krishna, Hare Krishna, Krishna Krishna, Hare Hare, Hare Rama, Hare Rama, Rama Rama, Hare Hare is directly enacted from the spiritual platform, surpassing all lower strata of consciousness — namely sensual, mental, and intellectual. There is no need of understanding the language of the mantra, nor there is any need of mental speculation, nor any intellectual adjustment for chanting this maha-mantra. It springs automatically from the spiritual platform, and as such, anyone can take part in this transcendental sound vibration without any previous qualification, and dance in ecstasy.</p>
+      <p>We have seen this practically. Even a child can take part in the chanting, or even a dog can take part in it. The chanting should be heard from the lips of a pure devotee of the Lord, so that immediate effects can be achieved.</p>
+      <p>The word Hara is a form of addressing the energy of the Lord. Both Krishna and Rama are forms of addressing directly the Lord, and they mean "the highest pleasure, eternal." Hara is the supreme pleasure potency of the Lord. This potency, when addressed as Hare, helps us in reaching the Supreme Lord.</p>
+      <p>The three words, namely Hara, Krishna and Rama, are transcendental seeds of the maha-mantra, and the chanting is a spiritual call for the Lord and His internal energy, Hara, for giving protection to the conditioned soul. The chanting is exactly like a genuine cry by the child for the mother. Mother Hara helps in achieving the grace of the supreme father, Hari, or Krishna, and the Lord reveals Himself to such a sincere devotee.</p>
+      <p>No other means, therefore, of spiritual realization is as effective in this age, as chanting the maha-mantra.</p>
+
+      <hr class="my-8 border-border" />
+
+      <h2 class="text-xl font-bold text-purple">Vedic Confirmation</h2>
+      <blockquote class="border-l-4 border-purple/30 pl-4 italic text-muted">
+        "In this age of quarrel and hypocrisy the only means of deliverance is chanting of the holy name of the Lord. There is no other way. There is no other way. There is no other way." — Brhad Naradiya Purana
+      </blockquote>
+      <blockquote class="border-l-4 border-purple/30 pl-4 italic text-muted">
+        "After searching through all the Vedic literature one cannot find a method of religion more sublime for this age than the chanting of Hare Krishna." — Kali Santarana Upanishad
+      </blockquote>
+    </div>
+  </section>
+</Layout>

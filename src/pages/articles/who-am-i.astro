@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout title="Who Am I?" description="Understanding our true spiritual identity">
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <a href={`${base}/articles`} class="text-sm text-purple hover:underline mb-6 inline-flex items-center gap-1">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      Back to Articles
+    </a>
+    <h1 class="text-3xl md:text-4xl font-bold text-purple mt-4 mb-6">Who Am I?</h1>
+    <img src={`${base}/images/articles/who-am-i-1.jpeg`} alt="Who Am I" class="w-full rounded-lg mb-8" />
+    <blockquote class="border-l-4 border-purple/30 pl-4 italic text-muted mb-8">
+      "As the embodied soul continually passes, in this body, from boyhood to youth to old age, the soul similarly passes into another body at death. The self-realized soul is not bewildered by such a change." — Bhagavad Gita 2.13
+    </blockquote>
+    <div class="prose max-w-none text-dark leading-relaxed space-y-5">
+      <p>Each of us is one of the innumerable spiritual souls who emanate from Krishna. Although both Krishna and we souls are spiritual, we can never be equal to Him. He is like the powerful sun, and we are like tiny particles of sunshine.</p>
+      <p>Like God, we have form, and we are eternal conscious beings full of happiness. We possess the marvelous spiritual qualities of God to a limited degree.</p>
+      <p>The essence of our identity is our eternal relationship with Krishna. Self-realization means discovering that relationship, which we have now forgotten. The best use of our free will, which is part of our spiritual nature, is to choose to take up the practices of Bhakti-yoga and awaken to our actual identity.</p>
+    </div>
+  </section>
+</Layout>

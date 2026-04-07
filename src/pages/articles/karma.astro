@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout title="Karma" description="Understanding the law of Karma">
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <a href={`${base}/articles`} class="text-sm text-purple hover:underline mb-6 inline-flex items-center gap-1">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      Back to Articles
+    </a>
+    <h1 class="text-3xl md:text-4xl font-bold text-purple mt-4 mb-6">Karma</h1>
+    <img src={`${base}/images/articles/karma-1.jpeg`} alt="Karma" class="w-full rounded-lg mb-8" />
+    <div class="prose max-w-none text-dark leading-relaxed space-y-5">
+      <p>Ever wondered why bad things happen to good people? Why we suffer? Why some days are awesome and others morose? If God exists, why does He keep quiet about it? The answer to all the above questions is karma.</p>
+      <p>Karma is one of those topics that many people know about, but few understand the intricacies of it. In literal terms, "karma" means "activity" and the law of karma regulates the reactions to our activities. If we act in good, or pious ways, we reap good reactions. If we act in impious, sinful, or destructive ways, we reap bad reactions in the future. Christian theology explains, "As ye sow so ye shall ye reap" while in physics karma is expressed by Newton's Law, "For every action there is an equal and opposite reaction."</p>
+      <p>Karmic reactions include not only things that happen to us, but determine our health, wealth, intelligence, physical appearance, and social status, as well as our personalities and inclinations. While we have some degree of freedom to choose our current actions, our choices are influenced by our natures, or personalities, which have developed from our previous actions.</p>
+      <p>Karma thus locks us up in a cycle of action and subsequent reaction. As long as we are in this cycle, we will experience both happiness and distress. Even if we act in a pious way, we destine ourselves to accept another material body at death to enjoy the reactions to our materially good actions. As long as we accept a material body we can not avoid the miseries of disease, old age, and death.</p>
+      <p>Fortunately karma is temporary. We can break free from its bonds by performing spiritual acts in service to Krishna. Such acts of devotion, or bhakti-yoga, purify the soul and gradually awaken our spiritual knowledge and innate love for Krishna. Thus, both our karma and our long-standing desire to enjoy life within the illusory material world—the root cause of our bondage—are destroyed.</p>
+    </div>
+  </section>
+</Layout>
