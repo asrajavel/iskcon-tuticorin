@@ -18,32 +18,12 @@ const upcomingEvents = [
 
 <Layout title="Home">
   <!-- Hero -->
-  <section class="relative text-white overflow-hidden">
-    <div class="absolute inset-0">
-      <img
-        src="https://iskcontirunelveli.com/wp-content/uploads/2019/10/slide_01.jpg"
-        alt="ISKCON Temple"
-        class="w-full h-full object-cover"
-      />
-      <div class="absolute inset-0 bg-black/60"></div>
-    </div>
-    <div class="relative max-w-4xl mx-auto text-center py-28 px-4">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-        Sri Sri Krishna Balaram Temple
-      </h1>
-      <p class="text-lg text-white/80 max-w-2xl mx-auto mb-8">
-        ISKCON Tirunelveli — Dedicated to the path of Bhakti Yoga
-        as taught by His Divine Grace A.C. Bhaktivedanta Swami Prabhupada.
-      </p>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <a href={`${base}/sevas`} class="bg-purple hover:bg-purple-dark px-6 py-3 rounded-lg font-medium transition-colors">
-          Book a Seva
-        </a>
-        <a href={`${base}/courses`} class="border border-white/40 hover:bg-white/10 px-6 py-3 rounded-lg font-medium transition-colors">
-          Explore Programs
-        </a>
-      </div>
-    </div>
+  <section>
+    <img
+      src={`${base}/images/hero.jpg`}
+      alt="Sri Sri Krishna Balaram - ISKCON Tirunelveli"
+      class="w-full"
+    />
   </section>
 
   <!-- Darshan Timings -->
@@ -92,24 +72,6 @@ const upcomingEvents = [
     </div>
   </section>
 
-  <!-- About -->
-  <section class="max-w-4xl mx-auto px-4 pb-12">
-    <div class="border border-border rounded-lg p-6">
-      <h2 class="text-xl font-bold text-purple mb-3">About ISKCON</h2>
-      <p class="text-muted text-sm leading-relaxed">
-        The International Society for Krishna Consciousness (ISKCON) was established in 1966 in New York
-        by A.C. Bhaktivedanta Swami Prabhupada. Today, ISKCON operates over 600 temples and yoga centers
-        worldwide with millions of Krishna devotees. ISKCON is a spiritual organization dedicated to
-        serving the welfare of all people — promoting divine consciousness, ethical values, peace, and
-        harmony regardless of caste, creed, or religion.
-      </p>
-      <a href={`${base}/about`} class="inline-flex items-center gap-1 mt-3 text-sm text-purple font-medium hover:underline">
-        Learn more
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-  </section>
-
   <!-- Articles Preview -->
   <section class="max-w-4xl mx-auto px-4 pb-12">
     <div class="flex items-center justify-between mb-6">
@@ -118,13 +80,18 @@ const upcomingEvents = [
     </div>
     <div class="grid sm:grid-cols-3 gap-5">
       {[
-        { slug: 'bhakti-yoga', title: 'Bhakti Yoga', summary: 'Connect to the Supreme by means of loving devotional service.' },
-        { slug: 'karma', title: 'Karma', summary: 'The law of karma regulates the reactions to our activities.' },
-        { slug: 'who-am-i', title: 'Who Am I?', summary: 'Discovering our eternal spiritual identity and relationship with Krishna.' },
+        { slug: 'bhakti-yoga', title: 'Bhakti Yoga', summary: 'Connect to the Supreme by means of loving devotional service.', image: `${base}/images/articles/bhakti-yoga-1.jpeg` },
+        { slug: 'karma', title: 'Karma', summary: 'The law of karma regulates the reactions to our activities.', image: `${base}/images/articles/karma-1.jpeg` },
+        { slug: 'who-am-i', title: 'Who Am I?', summary: 'Discovering our eternal spiritual identity and relationship with Krishna.', image: `${base}/images/articles/who-am-i-1.jpeg` },
       ].map(article => (
-        <a href={`${base}/articles/${article.slug}`} class="border border-border rounded-lg p-5 hover:border-purple/30 transition-colors group">
-          <h3 class="font-bold text-dark group-hover:text-purple transition-colors">{article.title}</h3>
-          <p class="text-muted text-sm mt-2">{article.summary}</p>
+        <a href={`${base}/articles/${article.slug}`} class="border border-border rounded-lg overflow-hidden hover:border-purple/30 transition-colors group">
+          <div class="h-36 overflow-hidden">
+            <img src={article.image} alt={article.title} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-dark group-hover:text-purple transition-colors">{article.title}</h3>
+            <p class="text-muted text-sm mt-1">{article.summary}</p>
+          </div>
         </a>
       ))}
     </div>
