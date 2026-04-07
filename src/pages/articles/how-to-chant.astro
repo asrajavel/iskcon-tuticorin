@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout title="How to Chant the Hare Krishna Maha Mantra" description="A practical guide to chanting the Hare Krishna Maha Mantra on beads">
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <a href={`${base}/articles`} class="text-sm text-purple hover:underline mb-6 inline-flex items-center gap-1">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      Back to Articles
+    </a>
+    <h1 class="text-3xl md:text-4xl font-bold text-purple mt-4 mb-6">How to Chant the Hare Krishna Maha Mantra</h1>
+    <img src={`${base}/images/articles/how-to-chant-hare-krishna-maha-mantra-1.jpeg`} alt="Chanting on beads" class="w-full rounded-lg mb-8" />
+    <div class="prose max-w-none text-dark leading-relaxed space-y-5">
+      <div class="bg-purple/5 border border-purple/20 rounded-lg p-4 text-center mb-6">
+        <p class="text-purple font-bold">Hare Krishna Hare Krishna Krishna Krishna Hare Hare<br />Hare Rama Hare Rama Rama Rama Hare Hare</p>
+      </div>
+      <p>The Vedic scriptures recommend the chanting of the Hare Krishna maha-mantra as the easiest and most effective means of spiritual realization in this age.</p>
+      <p>Before beginning to chant on your beads, reverently chant the Pancha Tattva mantra three times:</p>
+      <blockquote class="border-l-4 border-purple/30 pl-4 italic text-muted">
+        sri-krishna-chaitanya prabhu-nityananda sri-advaita gadadhara srivasadi-gaura-bhakta-vrinda
+      </blockquote>
+      <p>"I offer my obeisances to Sri Krishna Chaitanya, Prabhu Nityananda, Sri Advaita, Gadadhara, Srivasa and all others in the line of devotion."</p>
+      <img src={`${base}/images/articles/how-to-chant-hare-krishna-maha-mantra-2.jpeg`} alt="Japa meditation" class="w-full rounded-lg my-6" />
+      <p>If you are going to chant more than one round of japa, then, without chanting on the Krishna bead, turn the strand around and begin the next round. Continue pulling beads towards you, as before.</p>
+      <p>If you have a string of counter beads tied to your bead bag, you can keep track of the number of rounds you have chanted by moving one counter bead for each round.</p>
+      <p>Chant clearly and try to hear the holy names with attention. Some chanters find that looking at the mantra or a picture of Krishna helps them concentrate. If that works for you, that's fine. But remember that the goal is attentive hearing.</p>
+    </div>
+  </section>
+</Layout>

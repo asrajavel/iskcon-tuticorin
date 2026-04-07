@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout title="Sri Chaitanya Mahaprabhu" description="The life and teachings of Sri Chaitanya Mahaprabhu">
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <a href={`${base}/articles`} class="text-sm text-purple hover:underline mb-6 inline-flex items-center gap-1">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      Back to Articles
+    </a>
+    <h1 class="text-3xl md:text-4xl font-bold text-purple mt-4 mb-6">Sri Chaitanya Mahaprabhu</h1>
+    <img src={`${base}/images/articles/sri-caitanya-mahaprabhu-1.jpeg`} alt="Sri Chaitanya Mahaprabhu" class="w-full rounded-lg mb-8" />
+    <div class="prose max-w-none text-dark leading-relaxed space-y-5">
+      <p>In a special appearance, Krishna personally came in A.D. 1486 as Sri Chaitanya Mahaprabhu and acted as His own devotee. Sri Chaitanya Mahaprabhu is Krishna Himself, saturated with the love for Him that Radha embodies. As the emblem of the perfect devotee of Krishna, He displayed feelings of the highest spiritual ecstasy.</p>
+      <p>Krishna taught Bhagavad-gita to liberate all souls, and He returned as Sri Chaitanya to show us how to live by the Gita's teachings.</p>
+      <p>Because spiritual realization is difficult in the present age, Krishna as Sri Chaitanya Mahaprabhu is especially liberal. He has made pure love of God attainable by the easy process of chanting His holy names, as in the maha-mantra:</p>
+      <div class="bg-purple/5 border border-purple/20 rounded-lg p-4 text-center">
+        <p class="text-purple font-bold">Hare Krishna, Hare Krishna, Krishna Krishna, Hare Hare<br />Hare Rama, Hare Rama, Rama Rama, Hare Hare</p>
+      </div>
+      <h2 class="text-xl font-bold text-purple mt-8">Sri Chaitanya's Teachings</h2>
+      <p>Sri Chaitanya taught that Bhakti, or loving devotion to Krishna, is both the most effective spiritual practice and the ultimate goal of all spiritual practices.</p>
+      <p>Because He is Krishna Himself, His teachings are identical with those of Krishna in Bhagavad-gita. His only written work is His Shikshastaka, or "Eight Instructions," a concise course in attaining spiritual perfection.</p>
+      <p>Sri Chaitanya's teachings cover three main topics:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Knowledge of the soul's relationship with Krishna</li>
+        <li>The method of awakening that relationship</li>
+        <li>The awakened state of that relationship (pure love of God)</li>
+      </ul>
+      <img src={`${base}/images/articles/sri-caitanya-mahaprabhu-2.jpeg`} alt="Sankirtan movement" class="w-full rounded-lg my-6" />
+      <p>The sankirtan movement started by Sri Chaitanya Mahaprabhu in the 1500s — congregational chanting of the maha-mantra Hare Krishna — has spread throughout the world through ISKCON, founded by Srila Prabhupada in 1966.</p>
+    </div>
+  </section>
+</Layout>

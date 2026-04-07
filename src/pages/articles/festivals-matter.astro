@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout title="Why Festivals Matter" description="The importance of Vedic festivals in spiritual life">
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <a href={`${base}/articles`} class="text-sm text-purple hover:underline mb-6 inline-flex items-center gap-1">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      Back to Articles
+    </a>
+    <h1 class="text-3xl md:text-4xl font-bold text-purple mt-4 mb-6">Why Festivals Matter</h1>
+    <img src={`${base}/images/articles/festivals-matter-1.jpeg`} alt="ISKCON Festival" class="w-full rounded-lg mb-8" />
+    <div class="prose max-w-none text-dark leading-relaxed space-y-5">
+      <h2 class="text-xl font-bold text-purple">Gaura Purnima — Appearance of Sri Chaitanya Mahaprabhu</h2>
+      <p>Caitanya Mahaprabhu was born in Mayapur in the town of Nadia just after sunset on the evening of the 23rd Phalguna (1407 Sakabda), answering to the 18th of February 1486 of the Christian Era. The moon was eclipsed at the time of His birth, and the people of Nadia were then engaged, as was usual on such occasions, in bathing in the Bhagirathi with loud cheers of Haribol.</p>
+      <img src={`${base}/images/articles/festivals-matter-2.jpeg`} alt="Gaura Purnima celebration" class="w-full rounded-lg my-6" />
+      <p>His father, Jagannatha Misra, a poor brahmana of the Vedic order, and His mother, Saci-devi, a model good woman, both descended from brahmana stock originally residing in Sylhet. Mahaprabhu was a beautiful child, and the ladies of the town came to see Him with presents.</p>
+
+      <h2 class="text-xl font-bold text-purple mt-8">Rama Navami — Appearance of Lord Ramachandra</h2>
+      <blockquote class="border-l-4 border-purple/30 pl-4 italic text-muted">
+        "So far the Advent Day of Lord Ramachandra, it should be celebrated as Lord Chaitanya's Birthday was done. Fasting up to evening, and then take prasadam, and chant Hare Krishna whole day, and be engaged in reading and chanting off and on, chant for some time, then read for some time, then again have Kirtana and so on, throughout the day." — Srila Prabhupada
+      </blockquote>
+      <img src={`${base}/images/articles/festivals-matter-3.jpeg`} alt="Rama Navami" class="w-full rounded-lg my-6" />
+      <p>Just to attract us to His service, God appeared on earth more than one million years ago as Lord Ramachandra — the most benevolent ruler and valiant hero the world has ever known.</p>
+      <p>The incarnations of Godhead are as numerous as the waves of the sea, yet Krishna, the original Supreme Personality of Godhead, is the source of them all. Each incarnation has the same objective in human society — namely, to establish the principles of religion and to destroy demonic, irreligious influences.</p>
+
+      <h2 class="text-xl font-bold text-purple mt-8">Sri Krishna Janmashtami</h2>
+      <img src={`${base}/images/articles/festivals-matter-4.jpeg`} alt="Krishna Janmashtami" class="w-full rounded-lg my-6" />
+      <p>The grand celebration of Lord Krishna's appearance day is one of the most important festivals in the Vaishnava calendar. Devotees fast until midnight, engage in kirtan and hearing about Krishna's pastimes, and celebrate with a magnificent abhishekam of the Lord at midnight followed by a sumptuous feast of prasadam.</p>
+    </div>
+  </section>
+</Layout>

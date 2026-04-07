@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout title="Book Distribution" description="The importance of distributing Srila Prabhupada's books">
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <a href={`${base}/articles`} class="text-sm text-purple hover:underline mb-6 inline-flex items-center gap-1">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      Back to Articles
+    </a>
+    <h1 class="text-3xl md:text-4xl font-bold text-purple mt-4 mb-6">Book Distribution</h1>
+    <img src={`${base}/images/articles/book-distribution-1.png`} alt="Book Distribution" class="w-full rounded-lg mb-8" />
+    <div class="prose max-w-none text-dark leading-relaxed space-y-5">
+      <blockquote class="border-l-4 border-purple/30 pl-4 italic text-muted">
+        "If by my books and Bhagavad Gita As It Is, if I am able to bring at least one person to Krishna consciousness I will consider my labor as success." — Srila Prabhupada (June 12, 1969)
+      </blockquote>
+      <p>Srila Prabhupada once told a disciple: "This spiritual book distribution is an important service. To develop this you must pay attention. One who reads Krishna, Bhakti Rasamrta Sindhu, Bhagavad Gita As It Is, he will definitely become Krishna conscious. Hence we must somehow distribute these books through schools, colleges, libraries, or by individual distribution in a special way. This is a very important and respectful service to Lord Krishna."</p>
+      <img src={`${base}/images/articles/book-distribution-2.jpeg`} alt="Srila Prabhupada's books" class="w-full rounded-lg my-6" />
+      <p>If a person in his lifetime reads at least one book of Srila Prabhupada, his spiritual life will begin. He will understand the aim of his life one day. Because Srila Prabhupada has presented the teachings of Lord Krishna as it is, he has achieved in this world what no one could do. He has made thousands of Americans and Europeans accept our Vedic culture. In this regard, the distribution of Srila Prabhupada's books played an important role. Invariably many westerners first read one of Srila Prabhupada's books and became devotees.</p>
+      <p>Devotees who are practicing in Madurai, Tirunelveli, Periyakulam and the Namahattas in the southern districts are participating in this book distribution as much as possible. Through this divine service many people get the opportunity of getting at least one spiritual book of Srila Prabhupada. If they read the book during any period of their lifetime, their lives will be purified.</p>
+      <p>In schools, colleges, temples, offices, industries, local festivals, and residential areas of different parts of the city, books of Srila Prabhupada are distributed regularly.</p>
+    </div>
+  </section>
+</Layout>
