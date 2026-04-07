@@ -10,6 +10,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
     <div class="prose max-w-none text-dark leading-relaxed space-y-6">
       <p class="text-lg font-medium">Sri Sri Krishna Balaram Temple</p>
+
+      <div class="grid sm:grid-cols-2 gap-4 my-4">
+        <img src={`${base}/images/articles/iskcon-tirunelveli-1.jpeg`} alt="ISKCON Tirunelveli Temple" class="w-full rounded-lg" loading="lazy" />
+        <img src={`${base}/images/articles/iskcon-tirunelveli-2.jpeg`} alt="ISKCON Tirunelveli Deities" class="w-full rounded-lg" loading="lazy" />
+      </div>
+
       <p>
         Today there are more than 650 ISKCON temples and farm communities around the world. ISKCON Hare
         Krishna temple was started at Tirunelveli in the year 2002. Under the guidance and leadership of
@@ -180,22 +186,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           <h3 class="font-bold text-dark text-sm">{program.title}</h3>
           <p class="text-muted text-xs mt-1">{program.desc}</p>
         </div>
-      ))}
-    </div>
-
-    <h2 class="text-2xl md:text-3xl font-bold text-purple mb-6">Explore more</h2>
-
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-      {[
-        { title: 'Temple Sevas', href: `${base}/sevas` },
-        { title: 'Spiritual Courses', href: `${base}/courses` },
-        { title: 'Festivals & Events', href: `${base}/events` },
-        { title: 'Contact Us', href: `${base}/contact` },
-      ].map(link => (
-        <a href={link.href} class="flex items-center justify-between border border-border rounded-lg px-5 py-4 hover:border-purple/40 transition-colors group">
-          <span class="font-medium text-dark group-hover:text-purple transition-colors">{link.title}</span>
-          <svg class="w-5 h-5 text-muted group-hover:text-purple transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        </a>
       ))}
     </div>
   </section>
